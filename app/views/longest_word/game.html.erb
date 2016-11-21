@@ -1,0 +1,10 @@
+<h2>Grid</h2>
+<%= @grid.join(', ') %>
+
+<h2>Submit your answer</h2>
+<form action="/score" method='get'>
+  <input type="text" name='try'>
+  <input type="hidden" name='grid' value="<%= @grid.join(' ') %>">
+  <input type="hidden" name='start_time' value="<%= @start_time %>">
+  <input type="submit">
+</form>

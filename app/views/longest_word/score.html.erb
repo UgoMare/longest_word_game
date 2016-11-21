@@ -1,0 +1,15 @@
+<h2>Your answer is: <%= @try %></h2>
+
+<h3>Result</h3>
+<p>Time: <%= @result[:time] %></p>
+<p>Translation: <%= @result[:translation] %></p>
+<p>Score: <%= @result[:score] %></p>
+<p>Message: <%= @result[:message] %></p>
+
+
+<h3>Past games</h3>
+<ul>
+  <% session[:games][0..-2].each do |game| %>
+    <li>Score: <%= game['score'] %>, <%= game['message'] %></li>
+  <% end %>
+</ul>
